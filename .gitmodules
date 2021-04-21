@@ -1,0 +1,3 @@
+[submodule "mods/CORE/origins"]
+	path = mods/CORE/origins
+	url = https://github.com/Minetest-j45/origins
