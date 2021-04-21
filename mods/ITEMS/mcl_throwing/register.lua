@@ -332,7 +332,7 @@ minetest.register_craftitem("mcl_throwing:ender_pearl", {
 
   
 minetest.register_globalstep(function(dtime)
-	for _, pname in ipairs(origins.origin.enderian) do
+	for pname in ipairs(origins.origin.enderian) do
 		local player = minetest.get_player_by_name(pname)
 		local control = player:get_player_control()
 		if control.jump then
