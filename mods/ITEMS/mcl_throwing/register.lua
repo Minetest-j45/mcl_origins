@@ -330,6 +330,17 @@ minetest.register_craftitem("mcl_throwing:ender_pearl", {
 	groups = { transport = 1 },
 })
 
+--[[minetest.register_globalstep(function(dtime)
+	for _, player in ipairs(minetest.get_connected_players()) do
+		local pname = player:get_player_name()
+		local team = origins.get_player_team(pname)
+		if not team == "enderian" then return end
+		local control = player:get_player_control()
+		if control.jump then
+			mcl_throwing.get_player_throw_function("mcl_throwing:ender_pearl_entity")
+		end
+	end
+end)]]--
 
 mcl_throwing.register_throwable_object("mcl_throwing:snowball", "mcl_throwing:snowball_entity", 22)
 mcl_throwing.register_throwable_object("mcl_throwing:egg", "mcl_throwing:egg_entity", 22)
