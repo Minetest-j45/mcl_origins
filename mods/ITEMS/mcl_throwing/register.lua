@@ -331,12 +331,14 @@ minetest.register_craftitem("mcl_throwing:ender_pearl", {
 })
 
 minetest.register_globalstep(function(dtime)
-	for _, player in ipairs(minetest.get_connected_players()) do
+	for _, player in ipairs(minetest.get connected players()) do
+		minetest.chat_send_all("yayayayay")
 		local pname = player:get_player_name()
 		local team = origins.get_player_team(pname)
 		if not team == "enderian" then return end
 		local control = player:get_player_control()
 		if control.jump then
+			minetest.chat_send_all("OMG")
 			mcl_throwing.get_player_throw_function("mcl_throwing:ender_pearl_entity")
 		end
 	end
