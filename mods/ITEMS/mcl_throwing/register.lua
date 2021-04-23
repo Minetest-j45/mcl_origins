@@ -331,7 +331,7 @@ minetest.register_craftitem("mcl_throwing:ender_pearl", {
 })
 
 minetest.register_globalstep(function(dtime)
-	for _,player in pairs(minetest.get connected players()) do
+	for _,player in pairs(minetest.get_connected_players()) do
 		minetest.chat_send_all("yayayayay")
 		local pname = player:get_player_name()
 		local team = origins.get_player_team(pname)
