@@ -10,6 +10,24 @@ local function increase_damage(damage_group, factor)
 	end
 end
 
+mcl_enchanting.enchantments.water_protection = {
+	name = S("Water Protection"),
+	max_level = 1,
+	primary = {armor_head = true, armor_torso = true, armor_legs = true, armor_feet = true},
+	secondary = {},
+	disallow = {},
+	incompatible = {},
+	weight = 5,
+	description = S("Reduces water damage (only for enderians and blazeborns)."),
+	curse = false,
+	on_enchant = function() end,
+	requires_tool = false,
+	treasure = false,
+	power_range_table = {{1, 41},},
+	inv_combat_tab = true,
+	inv_tool_tab = false,
+}
+
 -- requires engine change
 --[[mcl_enchanting.enchantments.aqua_affinity = {
 	name = S("Aqua Affinity"),
